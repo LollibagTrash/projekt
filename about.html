@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StrideLab | Rólunk</title>
+    <meta
+      name="description"
+      content="Tudjon meg többet a StrideLab futócipő márkáról és küldetéséről."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .page-shell {
+        padding: 80px 0 100px;
+      }
+
+      .about-hero {
+        background: linear-gradient(180deg, #eef7f1 0%, #ffffff 100%);
+        border: 1px solid rgba(19, 38, 29, 0.08);
+        border-radius: 32px;
+        padding: 48px 32px;
+        box-shadow: 0 20px 45px rgba(17, 75, 57, 0.08);
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 32px;
+        align-items: center;
+      }
+
+      .about-card {
+        background: #fff;
+        border-radius: 24px;
+        padding: 24px;
+        border: 1px solid rgba(19, 38, 29, 0.08);
+        margin-top: 24px;
+      }
+
+      .about-card h3 {
+        margin-top: 0;
+      }
+
+      .about-image {
+        border-radius: 28px;
+        overflow: hidden;
+        min-height: 420px;
+        background: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
+      }
+
+      @media (max-width: 760px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">Stride<span>Lab</span></div>
+        <nav class="main-nav" aria-label="Fő navigáció">
+          <a href="/">Főoldal</a>
+          <a href="/#cipok">Termékek</a>
+          <a href="/#jellemzok">Előnyök</a>
+          <a href="/about" target="_blank" rel="noopener noreferrer">Rólunk</a>
+          <a href="/#kapcsolat">Kapcsolat</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container about-hero">
+        <div class="about-grid">
+          <div>
+            <p class="eyebrow dark">StrideLab</p>
+            <h1>Futásra tervezett cipő, ami a mindennapjaid része.</h1>
+            <p class="lead">
+              A StrideLab célja, hogy minden lépésedhez tökéletesen illeszkedő,
+              rugalmas és kellemes sportcipőt kínáljon. Munkánk középpontjában
+              a komfort, a teljesítmény és a tartós minőség áll.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-btn" href="/#cipok">Termékek megtekintése</a>
+              <a class="secondary-btn" href="/#kapcsolat">Kapcsolat</a>
+            </div>
+          </div>
+
+          <div class="about-image" aria-label="StrideLab futócipő"></div>
+        </div>
+
+        <div class="about-card">
+          <h3>Mit jelent nekünk a design?</h3>
+          <p>
+            A cipő nem csupán sporteszköz: egyenletes, energikus és stresszmentes
+            lépéseket ad a mindennapi rutinhoz. Ezért terveink mindig a futás
+            természetes ritmusára és a szervezet igényeire épülnek.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <h3>Miért válassz minket?</h3>
+          <p>
+            Kényelmes talpbetét, stabil szerkezet, könnyű anyagok és modern, sportos
+            design jellemzi termékeinket. Minden modellünk az aktív életmódhoz készült.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

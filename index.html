@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StrideLab | Futásra tervezett cipők</title>
+    <meta
+      name="description"
+      content="StrideLab saját, egyedi kinézetű futócipő webshop alapja."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">Stride<span>Lab</span></div>
+        <nav class="main-nav" aria-label="Fő navigáció">
+          <a href="/">Főoldal</a>
+          <a href="/#cipok">Termékek</a>
+          <a href="/#jellemzok">Előnyök</a>
+          <a href="/about" target="_blank" rel="noopener noreferrer">Rólunk</a>
+          <a href="/#kapcsolat">Kapcsolat</a>
+        </nav>
+        <button class="nav-button" id="cart-button" type="button">
+          Kosár <span id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="fooldal" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Új szezon • sportos stílus</p>
+            <h1>Futás, amely mozgat.</h1>
+            <p class="lead">
+              Kényelmes, könnyű és energikus cipők, amelyek minden lépésedhez
+              igazodnak.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-btn" href="/#cipok">Termékek megtekintése</a>
+              <a class="secondary-btn" href="/#jellemzok">Miért mi?</a>
+            </div>
+            <ul class="hero-stats" aria-label="Üzleti adatok">
+              <li><strong>12k+</strong><span>futó</span></li>
+              <li><strong>4.9/5</strong><span>értékelés</span></li>
+              <li><strong>48h</strong><span>szállítás</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Futócipő kép">
+            <div class="shoe-card-visual">
+              <div class="badge">Új</div>
+              <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+                alt="Futócipő"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="jellemzok" class="features container">
+        <div class="section-heading">
+          <p class="eyebrow dark">Miért StrideLab?</p>
+          <h2>Tervezve a teljesítményhez.</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-box">
+            <span class="feature-icon">⚡</span>
+            <h3>Rugalmas futás</h3>
+            <p>Ezrei az energiahullámok a lépésedbe épülnek be.</p>
+          </article>
+          <article class="feature-box">
+            <span class="feature-icon">🧠</span>
+            <h3>Testre szabott</h3>
+            <p>Válassz modelleket a célodhoz, legyen az tempó vagy hosszú táv.</p>
+          </article>
+          <article class="feature-box">
+            <span class="feature-icon">🛡️</span>
+            <h3>Hosszú távú comfort</h3>
+            <p>Puha talpbetét és stabil konstrukció a teljes napra.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="cipok" class="catalog container">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow dark">Népszerű modelljeink</p>
+            <h2>Kapcsolódó cipők</h2>
+          </div>
+          <span class="product-count" id="product-count">0 darab</span>
+        </div>
+
+        <div id="loading" class="loading-box">Termékek betöltése...</div>
+        <div id="error-message" class="error-box hidden" role="alert"></div>
+
+        <div class="catalog-controls" aria-label="Termékek szűrése és rendezése">
+          <label>
+            Keresés
+            <input id="search-input" type="search" placeholder="Modell vagy márka..." />
+          </label>
+          <label>
+            Márka
+            <select id="brand-filter">
+              <option value="all">Minden márka</option>
+            </select>
+          </label>
+          <label>
+            Rendezés
+            <select id="sort-select">
+              <option value="default">Alapértelmezett</option>
+              <option value="price-asc">Ár: növekvő</option>
+              <option value="price-desc">Ár: csökkenő</option>
+              <option value="name">Név szerint</option>
+            </select>
+          </label>
+          <label class="checkbox-label">
+            <input id="sale-filter" type="checkbox" />
+            Csak akciós
+          </label>
+        </div>
+
+        <div id="shoe-list" class="product-grid" aria-live="polite"></div>
+        <p id="empty-state" class="empty-state hidden">Nincs a feltételeknek megfelelő termék.</p>
+      </section>
+
+      <section class="promo container">
+        <div class="promo-content">
+          <div>
+            <p class="eyebrow">Szezonális ajánlat</p>
+            <h2>Akciós csomagok kezdéshez és hosszú távhoz.</h2>
+          </div>
+          <a href="/#kapcsolat" class="primary-btn">Kérjen ajánlatot</a>
+        </div>
+      </section>
+    </main>
+
+    <section id="kapcsolat" class="contact-section container">
+      <div class="section-heading">
+        <p class="eyebrow dark">Kapcsolat</p>
+        <h2>Kérjen személyre szabott ajánlatot.</h2>
+        <p class="contact-intro">Írja meg, milyen futócipőt keres, és hamarosan felvesszük Önnel a kapcsolatot.</p>
+      </div>
+      <form id="contact-form" class="contact-form">
+        <label>
+          Név
+          <input id="contact-name" name="name" type="text" autocomplete="name" required />
+        </label>
+        <label>
+          E-mail-cím
+          <input id="contact-email" name="email" type="email" autocomplete="email" required />
+        </label>
+        <label class="message-field">
+          Üzenet
+          <textarea id="contact-message" name="message" rows="5" required></textarea>
+        </label>
+        <button class="primary-btn" type="submit">Ajánlatkérés elküldése</button>
+        <p id="contact-feedback" class="contact-feedback hidden" role="status"></p>
+      </form>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <div class="brand">Stride<span>Lab</span></div>
+          <p>Futásra tervezett comfort és teljesítmény.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/">Főoldal</a>
+          <a href="/#cipok">Cipők</a>
+          <a href="/about" target="_blank" rel="noopener noreferrer">Rólunk</a>
+          <a href="/#kapcsolat">Kapcsolat</a>
+        </div>
+      </div>
+    </footer>
+
+    <div id="details-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="details-title">
+      <div class="modal-content">
+        <button class="close-button" data-close-modal type="button" aria-label="Bezárás">×</button>
+        <div class="details-image-wrap">
+          <img id="details-image" src="" alt="" />
+          <p id="details-image-fallback" class="details-image-fallback hidden">A termék képe jelenleg nem érhető el.</p>
+        </div>
+        <div class="modal-copy">
+          <span id="details-category" class="product-tag"></span>
+          <h2 id="details-title"></h2>
+          <p id="details-meta" class="product-meta"></p>
+          <p id="details-description"></p>
+          <strong id="details-price" class="price"></strong>
+          <button id="details-cart-button" class="buy-btn" type="button">Kosárba</button>
+        </div>
+      </div>
+    </div>
+
+    <aside id="cart-panel" class="cart-panel" aria-labelledby="cart-title">
+      <div class="cart-header">
+        <h2 id="cart-title">Kosár</h2>
+        <button id="close-cart" class="close-button" type="button" aria-label="Kosár bezárása">×</button>
+      </div>
+      <div id="cart-items"></div>
+      <div class="checkout-fields">
+        <label>
+          Név
+          <input id="checkout-name" type="text" autocomplete="name" placeholder="Az Ön neve" />
+        </label>
+        <label>
+          E-mail-cím
+          <input id="checkout-email" type="email" autocomplete="email" placeholder="nev@example.com" />
+        </label>
+      </div>
+      <div class="cart-footer">
+        <strong>Összesen: <span id="cart-total">0 Ft</span></strong>
+        <button id="checkout-button" class="primary-btn" type="button">Megrendelés</button>
+      </div>
+      <p id="cart-feedback" class="cart-feedback hidden" role="status"></p>
+    </aside>
+
+    <script src="app.js?v=3"></script>
+  </body>
+</html>
+

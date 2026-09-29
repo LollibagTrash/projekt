@@ -1,0 +1,71 @@
+{
+  "shoes": [
+    {
+      "id": "1",
+      "name": "Nike Pegasus 41",
+      "brand": "Nike",
+      "category": "Futócipő",
+      "gender": "Unisex",
+      "description": "Kényelmes, sokoldalú futócipő mindennapi edzésekhez.",
+      "price": 32990,
+      "oldPrice": 35990,
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Adidas Ultraboost 22",
+      "brand": "Adidas",
+      "category": "Futócipő",
+      "gender": "Unisex",
+      "description": "Kiemelkedő csillapítás és kényelmes kialakítás hosszabb futásokhoz.",
+      "price": 44990,
+      "oldPrice": 49990,
+      "image": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "3",
+      "name": "Hoka Clifton 9",
+      "brand": "Hoka",
+      "category": "Futócipő",
+      "gender": "Unisex",
+      "description": "Könnyű konstrukció és puha csillapítás a komfortos futásért.",
+      "price": 38990,
+      "oldPrice": null,
+      "image": "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "4",
+      "name": "Asics Gel-Kayano 30",
+      "brand": "Asics",
+      "category": "Stabil futócipő",
+      "gender": "Unisex",
+      "description": "Stabilitást és kényelmet biztosító modell rendszeres futók számára.",
+      "price": 52990,
+      "oldPrice": 57990,
+      "image": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "5",
+      "name": "Brooks Ghost 16",
+      "brand": "Brooks",
+      "category": "Futócipő",
+      "gender": "Unisex",
+      "description": "Kiegyensúlyozott, kényelmes modell mindennapi kilométerekhez.",
+      "price": 29990,
+      "oldPrice": null,
+      "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "6",
+      "name": "Saucony Triumph 21",
+      "brand": "Saucony",
+      "category": "Futócipő",
+      "gender": "Unisex",
+      "description": "Puha és kényelmes futócipő hosszabb edzésekhez.",
+      "price": 41990,
+      "oldPrice": 45990,
+      "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
